@@ -1,0 +1,10 @@
+baseurl: ""
+url: "scheduledovers.github.io"
+source: ""
+basecolor: "blue"
+
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge

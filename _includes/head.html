@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+        <meta name="theme-color" content="#4CAF50" />
+        <meta name="author" content="Scheduled Overs" />
+        <meta name="description" content="Scheduled Overs are a team that make things in not-quite-long-enough amounts of time" />
+
+        <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}Scheduled Overs" />
+        <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="{{ page.description | strip_html | xml_escape | truncate: 250 }}" />
+        <meta property="og:image" content="https://github.com/scheduledovers.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}Scheduled Overs" />
+        <meta name="twitter:description" content="{{ page.description | strip_html | xml_escape | truncate: 200 }}" />
+        <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+        <meta name="twitter:image" content="https://github.com/scheduledovers.png" />
+
+        <title>{% if page.title %}{{ page.title }} - {% endif %}Scheduled Overs</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="{{ site.url }}{{ site.baseurl }}/css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection" />
+        <link href="{{ site.url }}{{ site.baseurl }}/css/style.css" rel="stylesheet" type="text/css" media="screen,projection" />
+
+        <script src="{{ site.url }}{{ site.baseurl }}/js/jquery.min.js"></script>
+        <script src="{{ site.url }}{{ site.baseurl }}/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".button-collapse").sideNav();
+                $("#content").fadeIn();
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-extended {{ site.basecolor }}">
+                <div class="nav-wrapper container">
+                    <a href="" data-activates="mobilenav" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <a href="/" class="brand-logo">Scheduled Overs</a>
+                    {% include navbar.html %}
+                </div>
+            </nav>
+            <br>
+        </header>
+        <main>
